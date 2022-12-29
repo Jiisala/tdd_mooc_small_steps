@@ -25,7 +25,7 @@ function createApp(database) {
 
   function convert(date) {
     if (date instanceof Date){
-      return date.toTemporalInstant().toZonedDateTimeIso("UTC").toPlaindate();
+      return date.toTemporalInstant().toZonedDateTimeISO("UTC").toPlainDate();
     } else {
       return date
     }
@@ -90,6 +90,8 @@ function createApp(database) {
     const holidays = database.getHolidays();
     for (let row of holidays) {
       let holiday = new Date(row.holiday);
+      let holiday2 = convert(holiday)
+      let date2 = convert(date)
       if (
         date &&
         date.getFullYear() === holiday.getFullYear() &&
