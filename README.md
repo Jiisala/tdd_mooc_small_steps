@@ -1,3 +1,5 @@
+This is my submission for the TDD MOOC Small, safe steps exercise. Original README bellow.
+
 # [TDD MOOC](https://tdd.mooc.fi): Small, safe steps
 
 This is a refactoring exercise to practise doing small, safe steps.
