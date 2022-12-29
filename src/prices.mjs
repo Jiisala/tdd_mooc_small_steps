@@ -23,6 +23,13 @@ function createApp(database) {
     res.json({ cost });
   });
 
+  function convert(date) {
+    if (date instanceof Date){
+      return date.toTemporalInstant().toZonedDateTimeIso("UTC").toPlaindate();
+    } else {
+      return date
+    }
+  }
   function parseDate(dateString) {
     if (dateString) {
       return new Date(dateString);
